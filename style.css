@@ -127,19 +127,26 @@
         .back-button{
             background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 50%, #E53935 100%);
             color: white;
-            font-size: 17px;              
+            font-size: 17px;
             font-weight: bold;
-            padding: 18px 40px;           
+            padding: 18px 40px;
             border: none;
             border-radius: 40px;
             cursor: pointer;
             margin-top: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
             transition: all 0.3s ease;
+            text-transform: uppercase;
             letter-spacing: 0.3px;
-            white-space: nowrap;         
+            animation: slideInRight 0.8s ease-out 0.4s both;
+            position: relative;
+            overflow: hidden;
+            
+            /* Nuevas propiedades para enlaces */
+            text-decoration: none;
             display: inline-block;
+            text-align: center;
         }
 
         .main-title {
@@ -151,7 +158,6 @@
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             animation: slideInLeft 0.8s ease-out 0.2s both;
         }
-
         .cta-button {
             background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 50%, #E53935 100%);
             color: white;
@@ -169,8 +175,14 @@
             animation: slideInRight 0.8s ease-out 0.4s both;
             position: relative;
             overflow: hidden;
+            
+            /* Nuevas propiedades para enlaces */
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
+        /* Mantén el resto de tu CSS igual */
         .cta-button::before {
             content: '';
             position: absolute;
@@ -181,16 +193,14 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 40px rgba(255, 107, 107, 0.5);
+            color: white; /* Asegura que el color se mantenga en hover */
         }
-
         .cta-button:hover::before {
             left: 100%;
         }
-
         .cta-button:active {
             transform: translateY(-1px);
         }
